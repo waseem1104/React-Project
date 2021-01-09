@@ -20,6 +20,10 @@ function Header (){
                     <li className="nav-item">
                         <Link href="/Pokedex" className="nav-link">Mon Pokédex</Link>
                     </li>
+
+                    <li className="nav-item">
+                        <Link href="/WeatherPokemon" className="nav-link">PokéMétéo</Link>
+                    </li>
                 </ul>
 
             </div>

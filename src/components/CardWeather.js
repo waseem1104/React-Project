@@ -12,7 +12,7 @@ export default function CardWeather({dataCard}) {
     return (
 
         <>
-            <div className="col-md-5">
+            <div className="col-md-6">
             {   dataCard.cod === 200 ?
 
                 <div className="card text-center">

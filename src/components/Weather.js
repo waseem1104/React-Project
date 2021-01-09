@@ -6,9 +6,8 @@ import "../App.css"
 
 
 
-export default function Weather(){
+export default function Weather({city,setCity,weather,setWeather}){
 
-    let [city,setCity] = useState("");
 
     return (
 
@@ -17,7 +16,7 @@ export default function Weather(){
                 Météo API
             </div>
             <Form setInput={setCity} nameBtn="Obtenir la météo" placeholder="Paris" />
-            <WeatherAPI city={city}/>
+            <WeatherAPI city={city} weather={weather} setWeather={setWeather}/>
 
         </>
     );

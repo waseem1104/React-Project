@@ -7,7 +7,10 @@ import PokemonAPI from "./PokemonAPI";
 
 export default function Pokemon({setPokedex,pokedex}){
 
-    let [pokemon,setPokemon] = useState("pikachu");
+
+
+    let [pokemon,setPokemon] = useState("");
+
     return (
 
         <>

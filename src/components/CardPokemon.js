@@ -3,16 +3,15 @@ import React from "react";
 
 export default function CardPokemon({dataCard,setPokedex, pokedex}) {
 
-    const handleClick = (img,name,key) =>{
+    const handleClick = (img,name,key,type) =>{
 
-        let newPokemon =  { key : key, img: img,name :name};
+        let newPokemon =  { key : key, img: img,name :name, type : type};
         let newPokedex = pokedex.slice();
         newPokedex.push(newPokemon);
         setPokedex(newPokedex);
 
 
     };
-
 
     const checkPokedex = (name) =>{
 
@@ -37,9 +36,8 @@ export default function CardPokemon({dataCard,setPokedex, pokedex}) {
                         <div className="card-body">
                             <img src={dataCard.sprites?.front_default} />
                             <h5 className="card-title">{dataCard.types[0].type.name}</h5>
-
                             { !checkPokedex(dataCard.name) ?
-                            <button onClick={ () => handleClick(dataCard.sprites?.front_default,dataCard.name, "pokemon"+dataCard.name) } className="btn btn-danger">Attraper</button>
+                            <button onClick={ () => handleClick(dataCard.sprites?.front_default,dataCard.name, "pokemon"+dataCard.name, dataCard.types[0].type.name) } className="btn btn-danger">Attraper</button>
                             : <p>Pokemon capturé </p> }
                                 </div>
                     </div>

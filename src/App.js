@@ -6,6 +6,7 @@ import Weather from "./components/Weather"
 import HomePage from "./components/HomePage"
 import Pokemon from "./components/Pokemon"
 import DisplayPokedex from "./components/DisplayPokedex";
+import PokeWeather from "./components/PokeWeather";
 import './App.css';
 
 
@@ -13,6 +14,9 @@ import './App.css';
 function App() {
 
     let [pokedex,setPokedex] = useState([]);
+    let [city,setCity] = useState("Paris");
+    let [weather,setWeather] = useState("");
+
 
   return (
 
@@ -23,7 +27,7 @@ function App() {
           </Route>
 
           <Route path="/Weather">
-            <Weather/>
+            <Weather city={city} setCity={setCity} weather={weather} setWeather={setWeather}/>
           </Route>
 
           <Route path="/Pokemon">
@@ -31,12 +35,14 @@ function App() {
           </Route>
 
           <Route path="/Pokedex">
-
               <div className="headerPokemon">
                   POKEDEX
               </div>
               <DisplayPokedex pokedex={pokedex} setPokedex={setPokedex}/>
+          </Route>
 
+          <Route path="/WeatherPokemon">
+                <PokeWeather pokedex={pokedex} weather={weather}/>
           </Route>
 
       </>
