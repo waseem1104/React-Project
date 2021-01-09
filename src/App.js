@@ -1,19 +1,22 @@
 import logo from './logo.svg';
-import React from "react"
+import React, {useState} from "react"
 import Header from "./components/Header"
 import Route from "./components/Route"
 import Weather from "./components/Weather"
 import HomePage from "./components/HomePage"
+import Pokemon from "./components/Pokemon"
+import DisplayPokedex from "./components/DisplayPokedex";
 import './App.css';
+
+
 
 function App() {
 
-
+    let [pokedex,setPokedex] = useState([]);
 
   return (
 
-      <div className="container-fluid">
-
+      <>
           <Header/>
           <Route path="/">
               <HomePage/>
@@ -23,8 +26,20 @@ function App() {
             <Weather/>
           </Route>
 
+          <Route path="/Pokemon">
+            <Pokemon setPokedex={setPokedex} pokedex={pokedex}/>
+          </Route>
 
-      </div>
+          <Route path="/Pokedex">
+
+              <div className="headerPokemon">
+                  POKEDEX
+              </div>
+              <DisplayPokedex pokedex={pokedex} setPokedex={setPokedex}/>
+
+          </Route>
+
+      </>
 
 
 

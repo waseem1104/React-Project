@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "./Link";
 
 function Header (){
 
@@ -7,10 +8,17 @@ function Header (){
             <div className="container-fluid">
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <a href="/" className="nav-link">Accueil</a>
+                        <Link href="/" className="nav-link">Accueil</Link>
                     </li>
                     <li className="nav-item">
-                        <a href="/Weather" className="nav-link">Météo</a>
+                        <Link href="/Weather" className="nav-link">Météo</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link href="/Pokemon" className="nav-link">Pokémon</Link>
+                    </li>
+
+                    <li className="nav-item">
+                        <Link href="/Pokedex" className="nav-link">Mon Pokédex</Link>
                     </li>
                 </ul>
 

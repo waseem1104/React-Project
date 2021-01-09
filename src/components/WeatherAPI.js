@@ -3,15 +3,16 @@ import { useState, useEffect } from  "react";
 import CardWeather from "./CardWeather";
 
 
-
-
 export default function WeatherAPI({city}){
 
     const APIKEY = '46c2f66733a9738b77012c49ad8f168d';
 
     let [weather,setWeather] = useState([]);
 
+
+
     useEffect(() => {
+
 
         let lastCalled = true;
 
@@ -34,7 +35,9 @@ export default function WeatherAPI({city}){
 
     return (
         <>
-          <CardWeather dataCard={weather}/>
+            <div className="d-flex justify-content-center">
+                <CardWeather dataCard={weather}/>
+            </div>
         </>
 
     );
