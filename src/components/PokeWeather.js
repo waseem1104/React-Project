@@ -1,10 +1,12 @@
-import React, {useState} from "react";
+import React from "react";
 import "../App.css"
 import CardWeather from "./CardWeather";
 
 
 export default function PokeWeather({pokedex,weather}) {
 
+
+    // Retourne la temp en Celsius
 
     let getTempCelsius = () => {
 
@@ -13,6 +15,7 @@ export default function PokeWeather({pokedex,weather}) {
 
     };
 
+    // Permet de récupérer le type en fonction de la température
    let getTypePokemon = () => {
 
        let getTempCelcius = getTempCelsius();
@@ -31,6 +34,8 @@ export default function PokeWeather({pokedex,weather}) {
        }
 
    };
+
+   // Permet de récupérer les pokémons de mon pokédex en fonction du type
 
    let getPokemon = () => {
 

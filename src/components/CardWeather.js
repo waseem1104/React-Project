@@ -5,6 +5,7 @@ export default function CardWeather({dataCard}) {
 
     const ERRORMSG = "PAYS / VILLE INTROUVABLE";
 
+    // Retourne la température en Celsius
     let getTempCelsius = (temp) => {
         return Math.round(temp - 273.15);
     };

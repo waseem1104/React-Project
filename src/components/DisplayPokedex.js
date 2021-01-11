@@ -1,10 +1,10 @@
 import React from "react";
-import Route from "./Route";
 
 
 export default function DisplayPokedex({pokedex, setPokedex}) {
 
 
+    // Permet de relâcher un pokémon de mon pokédex
     const handleDelete = (name) =>{
 
        let newPokedex = pokedex.slice();
@@ -13,10 +13,13 @@ export default function DisplayPokedex({pokedex, setPokedex}) {
 
        setPokedex(newPokedex);
 
-
     };
 
     return(
+        <>
+        <div className="headerPokemon">
+            POKEDEX
+        </div>
 
         <div className="container-fluid pt-2">
             <div className="row">
@@ -35,6 +38,6 @@ export default function DisplayPokedex({pokedex, setPokedex}) {
                 )}
             </div>
         </div>
-
+        </>
     );
 }

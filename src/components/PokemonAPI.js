@@ -10,7 +10,6 @@ export default function PokemonAPI({pokemon,setPokedex,pokedex}) {
 
     useEffect(() => {
 
-
         let lastCalled = true;
 
         const fetchData =  () => {
@@ -33,9 +32,7 @@ export default function PokemonAPI({pokemon,setPokedex,pokedex}) {
     },[pokemon]);
 
 
-
     return(
-
 
         <>
             <div className="d-flex justify-content-center">

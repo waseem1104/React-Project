@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import React, {useState} from "react"
 import Header from "./components/Header"
 import Route from "./components/Route"
@@ -14,7 +13,7 @@ import './App.css';
 function App() {
 
     let [pokedex,setPokedex] = useState([]);
-    let [city,setCity] = useState("Paris");
+    let [city,setCity] = useState("");
     let [weather,setWeather] = useState("");
 
 
@@ -35,9 +34,6 @@ function App() {
           </Route>
 
           <Route path="/Pokedex">
-              <div className="headerPokemon">
-                  POKEDEX
-              </div>
               <DisplayPokedex pokedex={pokedex} setPokedex={setPokedex}/>
           </Route>
 
