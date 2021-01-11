@@ -38,6 +38,23 @@ function App() {
           </Route>
 
           <Route path="/WeatherPokemon">
+
+              <div className="headerPokemon">
+                  POKEWEATHER
+              </div>
+
+             <div className="container-fluid pt-3">
+
+                 <h5>Informations fusion des 2 APIs : </h5>
+
+                 <ul>
+                     <li>Température &lsaquo; 0° : Affichage des pokémons attrapés de type ICE </li>
+                     <li>Température compris entre 0° et 10° : Affichage des pokémons attrapés de type WATER </li>
+                     <li>Température compris entre 11° et 25° : Affichage des pokémons attrapés de type NORMAL </li>
+                     <li>Température &rsaquo; 25 ° : Affichage des pokémons attrapés de type FEU </li>
+                 </ul>
+
+             </div>
                 <PokeWeather pokedex={pokedex} weather={weather}/>
           </Route>
 

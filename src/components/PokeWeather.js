@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css"
 import CardWeather from "./CardWeather";
+import Route from "./Route";
 
 
 export default function PokeWeather({pokedex,weather}) {
@@ -52,9 +53,6 @@ export default function PokeWeather({pokedex,weather}) {
        return (
 
            <>
-               <div className="headerPokemon">
-                   POKEWEATHER
-               </div>
 
                <div className="container-fluid pt-5">
 
